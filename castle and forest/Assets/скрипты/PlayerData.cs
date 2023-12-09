@@ -6,19 +6,52 @@ public class PlayerData: MonoBehaviour
 
 {
 
-private bool hasKey = false;
+private bool _hasKey = false;
+
+private int _collectableItems;
+public Animator _door;
 
 public void AddKey()
 {
-hasKey = true;
+_hasKey = true;
 }
 
 public void RemoveKey()
 {
-hasKey = false;
+_hasKey = false;
 }
+
 public bool CheckKey()
+
 {
-return hasKey;
+return _hasKey;
 }
+
+public void AddItem(int amount)
+{
+    _collectableItems += amount;
+    if (CheckItemsAmount (10))
+{
+    RemoveItems(10);
+    _door.enabled = true;
+}
+}
+
+public bool CheckItemsAmount(int checkAmount)
+{
+    if (_collectableItems >- checkAmount)
+    {
+        return true;
+    }
+    else
+    {
+return false;
+    }
+}
+
+public void RemoveItems(int amount)
+{
+    _collectableItems -= amount;
+}
+
 }

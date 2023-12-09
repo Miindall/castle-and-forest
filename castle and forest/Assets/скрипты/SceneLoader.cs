@@ -5,8 +5,8 @@ using UnityEngine.SceneManagement;
 
 public class SceneLoader: MonoBehaviour
 {
-public static void LoadScene(string замок)
+public static void LoadScene(string Лес)
 {
-SceneManager.LoadScene(замок);
+SceneManager.LoadScene(Лес);
 }
 }

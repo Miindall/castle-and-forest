@@ -6,6 +6,7 @@ public class Door : MonoBehaviour
 
 {
 public Animator animator;
+public Animator animator1;
 private void OnTriggerEnter2D(Collider2D collision)
 {
 if (collision.CompareTag("Player"))
@@ -15,6 +16,7 @@ if (player.CheckKey())
 {
 player.RemoveKey();
 animator.enabled = true;
+animator1.enabled = true;
 }
 }
 }
