@@ -5,7 +5,7 @@ using UnityEngine;
 public class Attack : MonoBehaviour
 {
 	public float dmgValue = 4;
-	public GameObject throwableObject;
+	//public GameObject throwableObject;
 	public Transform attackCheck;
 	private Rigidbody2D m_Rigidbody2D;
 	public Animator animator;
@@ -37,10 +37,10 @@ public class Attack : MonoBehaviour
 
 		if (Input.GetKeyDown(KeyCode.V))
 		{
-			GameObject throwableWeapon = Instantiate(throwableObject, transform.position + new Vector3(transform.localScale.x * 0.5f,-0.2f), Quaternion.identity) as GameObject; 
-			Vector2 direction = new Vector2(transform.localScale.x, 0);
-			throwableWeapon.GetComponent<ThrowableWeapon>().direction = direction; 
-			throwableWeapon.name = "ThrowableWeapon";
+		//	GameObject throwableWeapon = Instantiate(throwableObject, transform.position + new Vector3(transform.localScale.x * 0.5f,-0.2f), Quaternion.identity) as GameObject; 
+		//	Vector2 direction = new Vector2(transform.localScale.x, 0);
+		//	throwableWeapon.GetComponent<ThrowableWeapon>().direction = direction; 
+		//	throwableWeapon.name = "ThrowableWeapon";
 		}
 	}
 

@@ -184,13 +184,13 @@ public class Ally : MonoBehaviour
 
 	public void RangeAttack()
 	{
-		if (doOnceDecision)
+	//	if (doOnceDecision)
 		{
-			GameObject throwableProj = Instantiate(throwableObject, transform.position + new Vector3(transform.localScale.x * 0.5f, -0.2f), Quaternion.identity) as GameObject;
-			throwableProj.GetComponent<ThrowableProjectile>().owner = gameObject;
-			Vector2 direction = new Vector2(transform.localScale.x, 0f);
-			throwableProj.GetComponent<ThrowableProjectile>().direction = direction;
-			StartCoroutine(NextDecision(0.5f));
+	//		GameObject throwableProj = Instantiate(throwableObject, transform.position + new Vector3(transform.localScale.x * 0.5f, -0.2f), Quaternion.identity) as GameObject;
+	//		throwableProj.GetComponent<ThrowableProjectile>().owner = gameObject;
+	//		Vector2 direction = new Vector2(transform.localScale.x, 0f);
+	//		throwableProj.GetComponent<ThrowableProjectile>().direction = direction;
+	//		StartCoroutine(NextDecision(0.5f));
 		}
 	}
 
@@ -272,8 +272,8 @@ public class Ally : MonoBehaviour
 		capsule.direction = CapsuleDirection2D.Horizontal;
 		transform.GetComponent<Animator>().SetBool("IsDead", true);
 		yield return new WaitForSeconds(0.25f);
-		m_Rigidbody2D.velocity = new Vector2(0, m_Rigidbody2D.velocity.y);
-		yield return new WaitForSeconds(1f);
+//		m_Rigidbody2D.velocity = new Vector2(0, m_Rigidbody2D.velocity.y);
+	yield return new WaitForSeconds(0.5f);
 		Destroy(gameObject);
 	}
 }
